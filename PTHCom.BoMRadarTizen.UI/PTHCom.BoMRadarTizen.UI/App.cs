@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -11,6 +12,27 @@ namespace PTHCom.BoMRadarTizen.UI
     {
         public App()
         {
+            var imageGrid = new Grid
+            {
+                ColumnDefinitions = { new ColumnDefinition() },
+                RowDefinitions = { new RowDefinition() }
+            };
+
+            imageGrid.Children.Add(new Image
+            {
+                Source = ImageSource.FromFile("background.png")
+            });
+
+            imageGrid.Children.Add(new Image
+            {
+                Source = ImageSource.FromFile("radar.png")
+            });
+
+            imageGrid.Children.Add(new Image
+            {
+                Source = ImageSource.FromFile("locations.png")
+            });
+
             // The root page of your application
             MainPage = new ContentPage
             {
@@ -18,10 +40,7 @@ namespace PTHCom.BoMRadarTizen.UI
                 {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
+                        imageGrid
                     }
                 }
             };

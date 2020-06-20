@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="org.tizen.example.PTHCom.BoMRadarTizen.UI.Wearable" version="1.0.0">
-	<profile name="wearable" />
-	<ui-application appid="org.tizen.example.PTHCom.BoMRadarTizen.UI.Wearable"
-					exec="PTHCom.BoMRadarTizen.UI.Wearable.dll"
-					type="dotnet"
-					multiple="false"
-					taskmanage="true"
-					nodisplay="false"
-					launch_mode="single">
-  <label>PTHCom.BoMRadarTizen.UI.Wearable</label>
-	<icon>PTHCom.BoMRadarTizen.UI.Wearable.png</icon>
+<manifest package="com.patrickhanlan.bomradartizen" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
+    <author href="https://www.patrickhanlan.com">Patrick Hanlan</author>
+    <description>A Tizen wearable app for displaying Australian BoM rain radar images</description>
+    <description xml:lang="en-au">A Tizen wearable app for displaying Australian BoM rain radar images</description>
+    <description xml:lang="en-us">A Tizen wearable app for displaying Australian BoM rain radar images</description>
+    <profile name="wearable" />
+    <ui-application appid="com.patrickhanlan.bomradartizen" exec="PTHCom.BoMRadarTizen.UI.Wearable.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
+        <label>com.patrickhanlan.bomradartizen</label>
+        <icon>tizenIcon.png</icon>
         <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
-	</ui-application>
+        <label xml:lang="en-au">BoM Radar</label>
+        <label xml:lang="en-us">BoM Radar</label>
+        <splash-screens />
+    </ui-application>
+    <shortcut-list />
+    <dependencies />
+    <provides-appdefined-privileges />
 </manifest>
